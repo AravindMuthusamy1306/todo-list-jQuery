@@ -11,8 +11,10 @@ $("#input-list").keydown(function (event) {
     }
 });
 $("#btn-add").click(addList);
-
 $("#btn-remove").click(function () { 
     $("#preview").text("Live Preview: ");
     $("#task-list").empty();
+});
+$("#task-list").on("click","li",function () { 
+    $(this).toggleClass("done");
 });
